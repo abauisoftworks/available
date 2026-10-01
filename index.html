@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' href='style.css'>
+	<script>
+		let saved = null;
+		try { saved = localStorage.getItem('themese'); } catch (e) {}
+		const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+		document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+	</script>
+</head>
+<body>
+	<main>
+		<button class='theme-btn' type='button'>Dark Mode</button>
+		<h1>The Server Rules</h1>
+		<div class='content'>
+			<section id='server'>
+				<div class='rules'>
+					<article class='rule'>
+						<div class='rule-top'>
+							<span class='rule-number'>1</span>
+							<h3>No NSFW Content</h3>
+							<span class='action'>Delete + Timeout</span>
+						</div>
+						<p>
+							Do Not Send NSFW Videos, NSFW Images, Anything Similar!
+						</p>
+					</article>
+					<article class='rule'>
+						<div class='rule-top'>
+							<span class='rule-number'>2</span>
+							<h3>No Gore Content</h3>
+							<span class='action'>Delete + Warn</span>
+						</div>
+						<p>
+							Do Not Send Gore Videos, Gore Images, Anything Similar!
+						</p>
+					</article>
+					<article class='rule'>
+						<div class='rule-top'>
+							<span class='rule-number'>3</span>
+							<h3>No Advertising/Promoting</h3>
+							<span class='action'>Delete + Timeout/Ban</span>
+						</div>
+						<p>
+							Do Not Advertise/Promote Other Servers, Scripts, Services, Anything Similar Without The Permission!
+						</p>
+					</article>
+					<article class='rule'>
+						<div class='rule-top'>
+							<span class='rule-number'>4</span>
+							<h3>No Skidding Stuffs</h3>
+							<span class='action'>Soft Ban</span>
+						</div>
+						<p>
+							Do Not Steal Someones Else Work And Claim You Created It, Modifying Or Rebranding It Without Their Permission Does Not Change That! This Rule Applies To Work From Outside Of K0bfuscator Server.
+						</p>
+					</article>
+					<article class='rule'>
+						<div class='rule-top'>
+							<span class='rule-number'>5</span>
+							<h3>No Spamming Bullshit</h3>
+							<span class='action'>Delete + Warn</span>
+						</div>
+						<p>
+							Do Not Spam/Flood The Channels With Messages, Mentions, Links, Anything Else!
+						</p>
+					</article>
+					<article class='rule'>
+						<div class='rule-top'>
+							<span class='rule-number'>6</span>
+							<h3>Confirm Reaction</h3>
+							<span class='action'>Unlocks Channels</span>
+						</div>
+						<p>
+							React The ✅ From The Channel After Reading The Server Rules!
+						</p>
+					</article>
+				</div>
+				<div class='box'>
+					<div class='box-title'>
+						Abia Bot Rules
+					</div>
+					<p>
+						<strong>Do NOT</strong> Chat <em>In #commands</em>!<br><strong>Do NOT</strong> Beg For <em>More Credits</em>!<br><strong>Do NOT</strong> Abuse The <em>Abia Bot</em>!
+					</p>
+					<p>
+						You Will Get An <strong>Verbal Warning</strong><br><em>(Three Warns = -1 Permanent Credit Point)</em><br><code>Penalty Example: -1 Credit Permanently! 4/4 Maximum Balance.</code>
+					</p>
+				</div>
+				<div class='box' id='privacy'>
+					<div class='box-title'>
+						Abia-Bot Privacy Policy & Information
+					</div>
+					<p>
+						<strong>Abia Bot</strong> Does <strong>NOT</strong> Run 24/7 Always!<br><em>Expect The Unexplained Random Downtimes...</em>
+					</p>
+					<p>
+						<strong>Abia Bot</strong> <em>Will</em> <strong>LOG</strong> <em>Your</em> <strong>Commands Activity</strong>!
+					</p>
+					<ul>
+						<li><strong>(Who Used It And When It Was Used...)</strong></li>
+						<li><strong>{The Purpose: Catch The Liars OR Punish The Abusers.}</strong></li>
+						<li class='no-wrap'><strong>[You Can Request Every Collected Data About You Right Now!]</strong></li>
+					</ul>
+					<p>
+						<strong>Abia Bot Does NOT Log Your Files/Scripts!</strong><br>(The Uploaded File Is Temporarily Stored For The Renamer/Compressor/Beautifier/Obfuscator To Work Obviously!)<br>{Temporarily Stored Scripts Is Deleted Immediately After The Abia Bot Sends The Output File In Your DMs!}
+					</p>
+				</div>
+				<div class='box' id='credits'>
+					<div class='box-title'>
+						Abia Bot Usages & Help
+					</div>
+					<p>
+						Use <strong>/help</strong> Before Using The <em>Commands</em> ! (Try 'pping' In #general)
+					</p>
+					<p>
+						<strong>Donate Me</strong> In DMs For More <em>Credits</em> ! (Robux Only)
+					</p>
+					<p>
+						<strong>Abia Bot</strong> Usually Takes About 1-5s Based Of The <em>Latency</em> !
+					</p>
+					<p>
+						<strong>Maximum Input File Size</strong> is <em>Two Megabytes Only</em> !
+					</p>
+					<p class='no-wrap'>
+						<em>A Note</em>: <strong>Donating Only</strong> Gives You <strong>An Role</strong> And <strong>Credits Balance</strong>!
+					</p>
+				</div>
+				<div class='box'>
+					<div class='box-title'>
+						Extra Abia Bot Information
+					</div>
+					<p class='no-wrap'>
+						<strong>Total Secure Privacy</strong>, Trust Me Dude!<br>You Cant Use <strong>Commands</strong> In <strong>Abia Bot</strong> DMs!<br>Using Any Of Command = <strong>You Agreed The Bot Rules!</strong>
+					</p>
+				</div>
+			</section>
+			<section id='punishments'>
+				<div class='punishments'>
+					<div class='box-title no-wrap'>
+						The Server Punishments For Having Those Amount of Warnings
+					</div>
+					<div class='row'>
+						<strong>5 Warnings</strong><span>One Hour Timeout</span>
+					</div>
+					<div class='row'>
+						<strong>10 Warnings</strong><span>One Day Timeout</span>
+					</div>
+					<div class='row'>
+						<strong>15 Warnings</strong><span>15 Days Timeout</span>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<script>
+		function label() {document.querySelector('.theme-btn').textContent = document.documentElement.dataset.theme === 'dark' ? 'Light Mode' : 'Dark Mode';}
+		document.querySelector('.theme-btn').addEventListener('click', () => {document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; try { localStorage.setItem('themese', document.documentElement.dataset.theme); } catch (e) {} label();});
+		label();
+	</script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+:root {
+	color-scheme: light;
+	--bg: #f4f5f8;
+	--card: #ffffff;
+	--fg: #1a1c22;
+	--fg-soft: #434853;
+	--dim: #6b717d;
+	--border: #dde0e6;
+	--accent: #4651c9;
+	--accent-bg: #eceefc;
+	--code-bg: #eef0f4;
+	--radius: 5px;
+	--content-width: 825px;
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
+	--bg: #14161b;
+	--card: #1b1e25;
+	--fg: #eceef2;
+	--fg-soft: #b9bec8;
+	--dim: #8b92a0;
+	--border: #2a2e37;
+	--accent: #9aa4ff;
+	--accent-bg: #242845;
+	--code-bg: #242830;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--fg);
+	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+main {
+	--gutter: 25px;
+	position: relative;
+	width: min(100%, var(--content-width));
+	min-width: min-content;
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+}
+
+main > h1 {
+	margin: 0;
+	padding-top: 72.5px;
+	font-size: clamp(35px, 5vw, 52.5px);
+	line-height: 1;
+	letter-spacing: -.05em;
+	font-weight: 700;
+}
+
+.theme-btn {
+	position: absolute;
+	top: 10px;
+	right: var(--gutter);
+	padding: 5px 10px;
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	color: var(--fg);
+	font: inherit;
+	font-size: 12.5px;
+	font-weight: 600;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+.content {
+	padding: 40px 0 95px;
+}
+
+section {
+	padding: 50px 0;
+	border-bottom: 1px solid var(--border);
+}
+
+section:first-child {
+	padding-top: 0;
+}
+
+section:last-child {
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+
+.rules {
+	border-top: 1px solid var(--border);
+}
+
+.rule {
+	padding: 20px 0;
+	border-bottom: 1px solid var(--border);
+}
+
+.rule-top {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 7.5px 12.5px;
+	padding-left: 50px;
+}
+
+.rule-number {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: var(--dim);
+	font-size: 17.5px;
+	line-height: 1.5;
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+}
+
+.rule h3 {
+	margin: 0;
+	font-size: 17.5px;
+	line-height: 1.5;
+	font-weight: 600;
+}
+
+.rule p {
+	max-width: 60ch;
+	margin: 7.5px 0 0 50px;
+	color: var(--fg-soft);
+	font-size: 15px;
+}
+
+.action {
+	padding: 2.5px 10px;
+	border-radius: var(--radius);
+	background: var(--accent-bg);
+	color: var(--accent);
+	font-size: 12.5px;
+	line-height: 1.5;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.box {
+	padding: 22.5px 25px;
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+}
+
+.rules + .box {
+	margin-top: 30px;
+}
+
+.box + .box {
+	margin-top: 15px;
+}
+
+.box-title {
+	margin: 0 0 15px;
+	padding-bottom: 12.5px;
+	border-bottom: 1px solid var(--border);
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.box p {
+	max-width: 65ch;
+	margin: 0 0 15px;
+	color: var(--fg-soft);
+}
+
+.box p:last-child {
+	margin-bottom: 0;
+}
+
+p.no-wrap {
+	max-width: none;
+}
+
+.box strong {
+	color: var(--fg);
+}
+
+.box ul {
+	margin: 0 0 15px;
+	padding-left: 20px;
+	color: var(--fg-soft);
+}
+
+.box li {
+	margin: 5px 0;
+	overflow-wrap: anywhere;
+}
+
+code {
+	display: inline-block;
+	max-width: 100%;
+	margin-top: 7.5px;
+	padding: 5px 10px;
+	background: var(--code-bg);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	color: var(--fg);
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	font-size: .85em;
+	line-height: 1.5;
+	overflow-wrap: anywhere;
+}
+
+.punishments {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	overflow: hidden;
+}
+
+.punishments .box-title {
+	margin: 0;
+	padding: 15px 20px;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	padding: 15px 20px;
+	border-bottom: 1px solid var(--border);
+}
+
+.row:last-child {
+	border-bottom: 0;
+}
+
+.row span {
+	color: var(--fg-soft);
+}
+
+:focus-visible {
+	outline: 2.5px solid var(--accent);
+	outline-offset: 5px;
+}
+
+@media (max-width: 720px) {
+	main {
+		--gutter: 20px;
+	}
+
+	main > h1 {
+		padding-top: 40px;
+	}
+
+	.content {
+		padding: 30px 0 65px;
+	}
+
+	section {
+		padding: 35px 0;
+	}
+
+	.rule-top {
+		padding-left: 35px;
+		gap: 5px 10px;
+	}
+
+	.rule p {
+		margin-left: 35px;
+		margin-top: 10px;
+	}
+
+	.box {
+		padding: 15px;
+	}
+
+	.row {
+		grid-template-columns: 1fr;
+		gap: 2.5px;
+	}
+}
+
+@media (max-width: 420px) {
+	main {--gutter: 15px;}
+}
